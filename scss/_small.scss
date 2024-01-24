@@ -1,0 +1,69 @@
+/* font size change from portrait to landscape prevention */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+}
+/* natural box model */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: $fontColor;
+}
+
+#headerWrapper {
+    background-color: #abc;
+    color: $secondaryColor;
+}
+header {
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem gutter;
+    gap: 8px;
+    h1 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: $normalWeight;
+    }
+}
+
+#navWrapper {
+    background-color: bisque;
+}
+nav {
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        li{flex: 1;}
+    }
+    li.active{background-color: pink;}
+    a {
+        display: block;
+        padding: 0.75rem;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        &:hover{ color: purple }
+    }
+}
+
+#footerWrapper {
+    background-color: aqua;
+}
+footer {
+    padding: 0.5rem $gutter;
+    p{
+        margin: 0;
+        font-weight: $lightWeight;
+        text-align: center;
+    }
+}

@@ -328,19 +328,19 @@ body {
   height: 100%;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
-  color: #333;
+  color: #000000;
 }
 
 #headerWrapper {
-  background-color: #abc;
-  color: #001adb;
+  background-color: #422828;
+  color: #ffffff;
 }
 
 header {
   display: flex;
   align-items: flex-end;
-  padding: 1rem gutter;
   gap: 8px;
+  padding: 1rem 16px;
 }
 header h1 {
   margin: 0;
@@ -349,7 +349,7 @@ header h1 {
 }
 
 #navWrapper {
-  background-color: bisque;
+  background-color: #752F2F;
 }
 
 nav ul {
@@ -362,21 +362,27 @@ nav ul li {
   flex: 1;
 }
 nav li.active {
-  background-color: pink;
+  background-color: #DB0000;
 }
 nav a {
   display: block;
   padding: 0.75rem;
-  color: white;
+  color: #ffffff;
   text-align: center;
   text-decoration: none;
+  font-weight: 700;
 }
 nav a:hover {
-  color: purple;
+  color: pink;
+}
+
+main {
+  padding: 0 16px;
 }
 
 #footerWrapper {
-  background-color: aqua;
+  background-color: #422828;
+  color: #ffffff;
 }
 
 footer {

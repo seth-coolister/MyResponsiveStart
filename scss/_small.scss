@@ -15,18 +15,18 @@ body{
     height: 100%;
     font-family: $defaultFont;
     font-weight: $normalWeight;
-    color: $fontColor;
+    color: $fontColorDark;
 }
 
 #headerWrapper {
-    background-color: #abc;
-    color: $secondaryColor;
+    background-color: $primaryColor;
+    color: $fontColorLight;
 }
 header {
     display: flex;
     align-items: flex-end;
-    padding: 1rem gutter;
     gap: 8px;
+    padding: 1rem $gutter;
     h1 {
         margin: 0;
         font-size: 1.2rem;
@@ -35,7 +35,7 @@ header {
 }
 
 #navWrapper {
-    background-color: bisque;
+    background-color: $secondaryColor;
 }
 nav {
     ul {
@@ -45,19 +45,25 @@ nav {
         display: flex;
         li{flex: 1;}
     }
-    li.active{background-color: pink;}
+    li.active{background-color: $accentColor;}
     a {
         display: block;
         padding: 0.75rem;
-        color: white;
+        color: $fontColorLight;
         text-align: center;
         text-decoration: none;
-        &:hover{ color: purple }
+        font-weight: $boldWeight;
+        &:hover{ color: pink }
     }
 }
 
+main {
+    padding: 0 $gutter;
+}
+
 #footerWrapper {
-    background-color: aqua;
+    background-color: $primaryColor;
+    color: $fontColorLight;
 }
 footer {
     padding: 0.5rem $gutter;

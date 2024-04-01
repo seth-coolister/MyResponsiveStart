@@ -18,98 +18,47 @@ body{
     color: $fontColorDark;
 }
 
+#headerWrapper {
+    background-color: $primaryColor;
+    color: $fontColorLight;
+}
 header {
     display: flex;
     align-items: flex-end;
-    gap: $gutter;
+    gap: 8px;
     padding: 1rem $gutter;
     h1 {
         margin: 0;
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: $normalWeight;
     }
 }
 
 #navWrapper {
-    background-color: $primaryColor;
+    background-color: $secondaryColor;
 }
 nav {
-    button{
-        padding: .75rem;
-        background: transparent;
-        border: none;
-        font-size: 1.5rem;
-        color: rgba(255,255,255,0.9);
-    }
     ul {
-        display: none;
         list-style-type: none;
         margin: 0;
         padding: 0;
-        border-top: 1px solid rgba(255,255,255,0.3);
-        &.open{display: block;} // css specificity issue when growing to large screen size
-        li{
-            border-bottom: 1px solid rgba(255,255,255,0.3);
-            a {
-                display: block;
-                padding: .75rem $gutter;
-                color: $fontColorLight;
-                
-                text-decoration: none;
-                font-weight: $lightWeight;
-                &:hover{background-color: darken($primaryColor, 4%);}
-            }
-            &.active a{background-color: darken($primaryColor, 8%);}
-        }
+        display: flex;
+        li{flex: 1;}
     }
-
+    li.active{background-color: $accentColor;}
+    a {
+        display: block;
+        padding: 0.75rem;
+        color: $fontColorLight;
+        text-align: center;
+        text-decoration: none;
+        font-weight: $boldWeight;
+        &:hover{ color: pink }
+    }
 }
 
 main {
     padding: 0 $gutter;
-
-    .cardWrapper{
-
-        section{
-            border: 1px solid $primaryColor;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 1rem 0;
-            h2, p, img {
-                margin: 0;
-                padding: 1rem $gutter;
-            }
-            h2{
-                background-color: $primaryColor;
-                color: $fontColorLight;
-                font-size: 1.5rem;
-                text-align: center;
-            }
-            img {
-                width: 100%;
-                height: auto;
-                display: block;
-                &.e2e{
-                    padding: 0;
-                }
-            }
-            p {
-                font-style: italic;
-            }
-            a{
-                display: block;
-                background-color: $secondaryColor;
-                padding: .5rem;
-                text-align: center;
-                margin: 0 4rem 1rem;
-                border-radius: 8px;
-                color: $fontColorLight;
-                text-decoration: none;
-            }
-        }
-
-    } // end card wrapper
-
 }
 
 #footerWrapper {
